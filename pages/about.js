@@ -1,11 +1,10 @@
-import styles from "../styles/Home.module.css";
+import React from 'react'
 
-
-export default function Home() {
+function about() {
   return (
     <div className="container pt-4">
       <div className="row">
-        <h1>home</h1>
+        <h1>About</h1>
         <hr />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
@@ -14,8 +13,10 @@ export default function Home() {
           autem assumenda. Error aperiam laborum voluptatem officiis fuga,
           distinctio expedita aspernatur hic unde quibusdam cum eos itaque
           consectetur et natus nostrum quisquam sint id deleniti fugiat!
-        </p>
+      </p>
       </div>
     </div>
   )
 }
+
+export default about
