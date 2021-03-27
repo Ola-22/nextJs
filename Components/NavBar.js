@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 function NavBar() {
+  const router = useRouter();
+  console.log(router);
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -19,17 +22,17 @@ function NavBar() {
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link href="/">
-                  <a className="nav-link active" aria-current="page">Home</a>
+                  <a className={"nav-link " + `${router.pathname === "/" ? "active" : ""}`} aria-current="page">Home</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/about">
-                  <a className="nav-link">About</a>
+                  <a className={"nav-link " + `${router.pathname === "/about" ? "active" : ""}`}>About</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/blog">
-                  <a className="nav-link">Blog</a>
+                  <a className={"nav-link " + `${router.pathname === "/blog" ? "active" : ""}`}>Blog</a>
                 </Link>
               </li>
             </ul>
