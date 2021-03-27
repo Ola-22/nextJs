@@ -37,5 +37,4 @@ function blog({ posts }) {
 }
 
 
-
 export default blog;
